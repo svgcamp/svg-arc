@@ -9,9 +9,10 @@
 <p align="center"><img width="400" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/svg-arc.png"></p>
 
 
-Generate a fan, ring, circle, or arc SVG path (d attribute value of `<path>`).
+生成扇形，环形，圆形，或弧形的 SVG 路径（`<path>` 的 `d` 属性值）。
 
-## Install
+
+## 安装
 
 ```
 npm i --save svg-arc
@@ -23,33 +24,34 @@ import arc from 'svg-arc';
 arc({x, y, R, r, start, end})
 ```
 
-## Arguments
+## 参数
 
-| arguments | type   | default | description           |
+| 参数 | 类型   | 默认值 | 描述           |
 | :-------- | :----- | :------ | :-------------------- |
-| x         | Number | 0       | The x-coordinate of the center of the circle           |
-| y         | Number | 0       | The y-coordinate of the center of the circle           |
-| R         | Number | 0       | Outside Radius                |
-| r         | Number | 0       | Inside Radius                |
-| start     | Number | -       | The starting angle, `0`～`360`  |
-| end       | Number | -       | The ending angle, `0`～`360` |
+| x         | Number | 0       | 圆心x轴坐标           |
+| y         | Number | 0       | 圆心y轴坐标           |
+| R         | Number | 0       | 外半径                |
+| r         | Number | 0       | 内半径                |
+| start     | Number | -       | 起点角度，`0`～`360`  |
+| end       | Number | -       | 终点角度， `0`～`360` |
 
+起点和终点的角度: 12点钟方向值为 `0`，3点钟方向为 `90`，6点钟方向为`180`，9点钟方向为`270`。由于`360`是一个循环，所以， `540`、`900` 均代表6点钟方向。
 
-## Usage
+## 用法示例
 
 ``` js
 import arc from 'svg-arc';
 
-// create SVG
+// 创建 SVG
 const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 svg.setAttribute('viewBox', '0 0 300 300');
 
-// create path
+// 创建 path
 const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 path.setAttribute('fill', '#ddd');
 svg.appendChild(path);
 
-// set path
+// 设置路径
 const d = arc({
   x: 150,
   y: 150,
@@ -60,12 +62,12 @@ const d = arc({
 });
 path.setAttribute('d', d);
 
-// When drawing a ring, the property value of 'fill-rule' must be set to 'evenodd', otherwise the color cannot be filled correctly.
+// 绘制环形时，必须设置`fill-rule`的属性值为`evenodd`，否则`fill`无法正确填充颜色。
 path.setAttribute('fill-rule', 'evenodd');
 
 ```
 
-### Generate Circle
+### 绘制圆形
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/circle.png"></p>
 
@@ -78,7 +80,7 @@ arc({
 ```
 
 
-### Generate Ring
+### 绘制环形
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/ring.png"></p>
 
@@ -93,9 +95,9 @@ arc({
 path.setAttribute('fill-rule', 'evenodd');
 ```
 
-When drawing a ring, the property value of `fill-rule` must be set to `evenodd`, otherwise the color cannot be filled correctly.
+绘制环形时，必须设置`fill-rule`的属性值为`evenodd`，否则`fill`无法正确填充颜色。
 
-### Generate Fan
+### 绘制扇形
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/sector.png"></p>
 
@@ -110,7 +112,7 @@ arc({
 })
 ```
 
-### Generate Arc
+### 绘制弧形
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/arc.png"></p>
 
