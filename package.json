@@ -1,0 +1,26 @@
+{
+  "name": "svg-arc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "svg"
+  ],
+  "author": "Z8264",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-vue": "^6.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svgcamp/svg-arc"
+  }
+}
