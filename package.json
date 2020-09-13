@@ -1,6 +1,6 @@
 {
   "name": "svg-arc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,10 @@
   "keywords": [
     "svg",
     "circle",
+    "annulus",
     "sector",
-    "arc",
-    "annulus"
+    "circular-sector",
+    "annular-sector"
   ],
   "author": "Z8264",
   "license": "MIT",

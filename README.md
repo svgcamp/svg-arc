@@ -9,7 +9,7 @@
 <p align="center"><img width="400" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/svg-arc.png"></p>
 
 
-Generate a fan, ring, circle, or arc SVG path (d attribute value of `<path>`).
+Use SVG's `<path>` to generate circle, annulus, circular sector or annular sector, and return the `d` attribute value.
 
 ## Install
 
@@ -60,12 +60,12 @@ const d = arc({
 });
 path.setAttribute('d', d);
 
-// When drawing a ring, the property value of 'fill-rule' must be set to 'evenodd', otherwise the color cannot be filled correctly.
+// When drawing a annulus, the attribute value of 'fill-rule' must be set to 'evenodd', otherwise the color cannot be filled correctly.
 path.setAttribute('fill-rule', 'evenodd');
 
 ```
 
-### Generate Circle
+### Circle
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/circle.png"></p>
 
@@ -78,7 +78,7 @@ arc({
 ```
 
 
-### Generate Ring
+### Annulus
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/ring.png"></p>
 
@@ -93,9 +93,9 @@ arc({
 path.setAttribute('fill-rule', 'evenodd');
 ```
 
-When drawing a ring, the property value of `fill-rule` must be set to `evenodd`, otherwise the color cannot be filled correctly.
+When drawing a annulus, the attribute value of `fill-rule` must be set to `evenodd`, otherwise the color cannot be filled correctly.
 
-### Generate Fan
+### Circular Sector
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/sector.png"></p>
 
@@ -110,7 +110,7 @@ arc({
 })
 ```
 
-### Generate Arc
+### Annular Sector
 
 <p align="left"><img width="200" src="https://raw.githubusercontent.com/svgcamp/svg-arc/master/images/arc.png"></p>
 
